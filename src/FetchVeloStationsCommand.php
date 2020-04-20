@@ -2,10 +2,7 @@
 
 namespace Spatie\VeloTile;
 
-use App\Services\Velo\Velo;
-use App\Tiles\Velo\VeloStore;
 use Illuminate\Console\Command;
-use App\Events\Velo\StationsFetched;
 
 class FetchVeloStationsCommand extends Command
 {
@@ -13,11 +10,11 @@ class FetchVeloStationsCommand extends Command
 
     protected $description = 'Fetch Velo Stations';
 
-    public function handle(Velo $velo)
+    public function handle(VeloApi $velo)
     {
         $this->info('Fetching Velo stations...');
 
-        $stations = $velo->getStations(config('services.velo.stations'));
+        $stations = $velo->getStations(config('dashboard.tiles.velo.stations') ?? []);
 
         VeloStore::make()->setStations($stations);
 

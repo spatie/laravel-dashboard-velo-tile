@@ -16,7 +16,7 @@ class VeloTileComponent extends Component
 
     public function render()
     {
-        return view('components.tiles.velo', [
+        return view('dashboard-velo-tile::tile', [
             'stations' => VeloStore::make()->stations(),
         ]);
     }

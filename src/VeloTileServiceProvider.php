@@ -9,7 +9,6 @@ class VeloTileServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-
         if ($this->app->runningInConsole()) {
             $this->commands([
                 FetchVeloStationsCommand::class,
@@ -18,6 +17,6 @@ class VeloTileServiceProvider extends ServiceProvider
 
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'dashboard-velo-tile');
 
-        Livewire::component('dashboard-velo-tile::tile', VeloTileComponent::class);
+        Livewire::component('velo-tile', VeloTileComponent::class);
     }
 }
