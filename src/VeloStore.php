@@ -3,9 +3,8 @@
 namespace Spatie\VeloTile;
 
 use App\Tiles\Velo\VeloStation;
-use Spatie\Dashboard\Models\Tile;
-use Spatie\Valuestore\Valuestore;
 use Illuminate\Support\Collection;
+use Spatie\Dashboard\Models\Tile;
 
 class VeloStore
 {

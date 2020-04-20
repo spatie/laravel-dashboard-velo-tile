@@ -5,7 +5,6 @@ namespace Spatie\VeloTile;
 use App\Services\Velo\Velo;
 use App\Tiles\Velo\VeloStore;
 use Illuminate\Console\Command;
-use App\Events\Velo\StationsFetched;
 
 class FetchVeloStationsCommand extends Command
 {
