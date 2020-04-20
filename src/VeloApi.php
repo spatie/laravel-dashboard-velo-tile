@@ -13,7 +13,7 @@ class VeloApi
 
         return collect($stations)
             ->filter(function ($station) use ($stationIds) {
-                return dump(in_array($station['id'], $stationIds));
+                return in_array($station['id'], $stationIds);
             })->mapWithKeys(function ($station) use ($stationIds) {
                 $key = array_search($station['id'], $stationIds);
 
