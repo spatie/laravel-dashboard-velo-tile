@@ -2,7 +2,6 @@
 
 namespace Spatie\VeloTile;
 
-use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Http;
 
 class VeloApi
