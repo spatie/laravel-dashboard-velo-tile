@@ -2,8 +2,8 @@
 
 namespace Spatie\VeloTile;
 
-use Spatie\Dashboard\Models\Tile;
 use Illuminate\Support\Collection;
+use Spatie\Dashboard\Models\Tile;
 
 class VeloStore
 {
