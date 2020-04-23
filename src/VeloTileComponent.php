@@ -18,7 +18,7 @@ class VeloTileComponent extends Component
     {
         return view('dashboard-velo-tile::tile', [
             'stations' => VeloStore::make()->stations(),
-            'refreshIntervalInSeconds' => config('dashboard.tiles.velo.refresh_interval_in_seconds') ?? 60
+            'refreshIntervalInSeconds' => config('dashboard.tiles.velo.refresh_interval_in_seconds') ?? 60,
 
         ]);
     }
