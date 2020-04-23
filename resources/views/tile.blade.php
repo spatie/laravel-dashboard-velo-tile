@@ -1,17 +1,24 @@
 <x-dashboard-tile :position="$position">
-    <div wire:poll.60s class="grid gap-padding h-full markup" style="grid-template-rows: auto 1fr;">
-        <div class="grid place-center w-10 h-10 rounded-full" style="background-color: rgba(255, 255, 255, .9)">
-            <div class="text-3xl leading-none -mt-1">🚲</div>
+    <div wire:poll.60s class="grid grid-rows-auto-1 gap-2 h-full">
+        <div
+            class="flex items-center justify-center w-10 h-10 rounded-full"
+            style="background-color: rgba(255, 255, 255, .9)"
+        >
+            <div class="text-3xl leading-none -mt-1">
+                🚲
+            </div>
         </div>
-        <ul class="align-self-center">
+        <ul class="self-center | divide-y-2">
             @foreach($stations as $station)
-                <li>
-                    <span class="{{ $station->displayClass() }}">
+                <li class="grid grid-cols-1-auto py-1">
+                    <span class="truncate {{ $station->displayClass() }}">
                         {{ $station->shortName() }}
                     </span>
                     <span>
-                        <span class="{{ $station->isNearlyEmpty() ? $stations->displayClass() : '' }}"
-                              class="font-bold variant-tabular">
+                        <span class="
+                            font-bold tabular-nums
+                            {{ $station->isNearlyEmpty() ? $stations->displayClass() : '' }}
+                        ">
                             {{ $station->numberOfBikesAvailable() }}
                         </span>
                     </span>
