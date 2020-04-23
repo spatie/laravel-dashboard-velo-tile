@@ -1,4 +1,4 @@
-<x-dashboard-tile :position="$position">
+<x-dashboard-tile :position="$position" :refresh-interval="$refreshIntervalInSeconds">
     <div class="grid grid-rows-auto-1 gap-2 h-full">
         <div
             class="flex items-center justify-center w-10 h-10 rounded-full"
@@ -8,7 +8,7 @@
                 🚲
             </div>
         </div>
-        <ul wire:poll.{{ $refreshIntervalInSeconds }}s class="self-center | divide-y-2">
+        <ul class="self-center | divide-y-2">
             @foreach($stations as $station)
                 <li class="grid grid-cols-1-auto py-1">
                     <span class="truncate {{ $station->displayClass() }}">
