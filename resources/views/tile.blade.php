@@ -1,5 +1,5 @@
 <x-dashboard-tile :position="$position">
-    <div wire:poll.60s class="grid grid-rows-auto-1 gap-2 h-full">
+    <div wire:poll.{{ $refreshIntervalInSeconds }}s class="grid grid-rows-auto-1 gap-2 h-full">
         <div
             class="flex items-center justify-center w-10 h-10 rounded-full"
             style="background-color: rgba(255, 255, 255, .9)"
