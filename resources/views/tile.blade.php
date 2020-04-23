@@ -1,5 +1,5 @@
 <x-dashboard-tile :position="$position">
-    <div wire:poll.{{ $refreshIntervalInSeconds }}s class="grid grid-rows-auto-1 gap-2 h-full">
+    <div class="grid grid-rows-auto-1 gap-2 h-full">
         <div
             class="flex items-center justify-center w-10 h-10 rounded-full"
             style="background-color: rgba(255, 255, 255, .9)"
@@ -8,7 +8,7 @@
                 🚲
             </div>
         </div>
-        <ul class="self-center | divide-y-2">
+        <ul wire:poll.{{ $refreshIntervalInSeconds }}s class="self-center | divide-y-2">
             @foreach($stations as $station)
                 <li class="grid grid-cols-1-auto py-1">
                     <span class="truncate {{ $station->displayClass() }}">
