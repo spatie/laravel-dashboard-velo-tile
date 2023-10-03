@@ -1,10 +1,6 @@
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
-
 # A tile to display the status of Velo, the Antwerp bike sharing system
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-dashboard-velo-tile.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-dashboard-velo-tile)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/spatie/laravel-dashboard-velo-tile/run-tests?label=tests)](https://github.com/spatie/laravel-dashboard-velo-tile/actions?query=workflow%3Arun-tests+branch%3Amaster)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-dashboard-velo-tile.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-dashboard-velo-tile)
 
 This tile can used on the [Laravel Dashboard](https://docs.spatie.be/laravel-dashboard) to display the status of Velo, the Antwerp bike sharing system
