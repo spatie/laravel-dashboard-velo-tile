@@ -4,11 +4,9 @@ namespace Spatie\VeloTile;
 
 class VeloStation
 {
-    private array $veloStationAttributes;
-
-    public function __construct(array $veloStationAttributes)
-    {
-        $this->veloStationAttributes = $veloStationAttributes;
+    public function __construct(
+        private array $veloStationAttributes,
+    ) {
     }
 
     public function shortName(): string
@@ -28,7 +26,7 @@ class VeloStation
         }
 
         if ($this->isNearlyEmpty()) {
-            return 'text-danger';
+            return 'text-error';
         }
 
         return '';
