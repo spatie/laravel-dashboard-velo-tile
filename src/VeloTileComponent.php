@@ -2,19 +2,12 @@
 
 namespace Spatie\VeloTile;
 
-use Livewire\Component;
+use Illuminate\Contracts\View\View;
+use Spatie\Dashboard\Components\BaseTileComponent;
 
-class VeloTileComponent extends Component
+class VeloTileComponent extends BaseTileComponent
 {
-    /** @var string */
-    public $position;
-
-    public function mount(string $position)
-    {
-        $this->position = $position;
-    }
-
-    public function render()
+    public function render(): View
     {
         return view('dashboard-velo-tile::tile', [
             'stations' => VeloStore::make()->stations(),

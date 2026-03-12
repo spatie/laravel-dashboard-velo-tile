@@ -10,7 +10,7 @@ class FetchVeloStationsCommand extends Command
 
     protected $description = 'Fetch Velo Stations';
 
-    public function handle(VeloApi $velo)
+    public function handle(VeloApi $velo): void
     {
         $this->info('Fetching Velo stations...');
 
